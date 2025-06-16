@@ -25,7 +25,12 @@ const app = express();
 
 // Configure CORS for production
 const corsOptions = {
-  origin: ['https://think-sort-dsa-tutor.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
+  origin: [
+    'https://think-sort-dsa-tutor-kljz.vercel.app',
+    'https://think-sort-dsa-tutor.vercel.app', 
+    'http://localhost:5173', 
+    'http://localhost:3000'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
