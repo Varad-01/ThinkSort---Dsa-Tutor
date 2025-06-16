@@ -7,7 +7,7 @@ import { CodeEditorPanel } from "./components/code-editor-panel";
 import { getConversation, getConversations } from "./lib/api";
 
 export default function Dashboard({ userEmail }: { userEmail: string | null }) {
-  const [token, setToken] = useState<string | null>(
+  const [token] = useState<string | null>(
     localStorage.getItem("token")
   );
   const [selectedConversation, setSelectedConversation] = useState<string | null>(null);
