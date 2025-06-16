@@ -23,7 +23,15 @@ console.log("Environment variables loaded successfully");
 
 const app = express();
 
-app.use(cors());
+// Configure CORS for production
+const corsOptions = {
+  origin: ['https://think-sort-dsa-tutor.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(rateLimiter);
 
